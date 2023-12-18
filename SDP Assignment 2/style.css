@@ -1,0 +1,141 @@
+@media only screen and (max-width: 600px) {
+    .header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu-btn {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu {
+        margin: 5px 0;
+    }
+
+    .box {
+        width: 100%; /* Full width for smaller screens */
+    }
+
+    .box-img {
+        width: 100%;
+        height: auto; /* Maintain aspect ratio */
+        border-radius: 7px;
+    }
+
+    .pp-img {
+        width: 30px;
+        height: 30px;
+        border-radius: 20px;
+    }
+
+    .verified-logo {
+        width: 15px;
+        height: 15px;
+    }
+
+    .inner {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .img-txt {
+        left: 0;
+        top: 150px; /* Adjust position */
+        font-size: smaller;
+    }
+}
+
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    margin: 5px;
+}
+
+
+.sbv-btn{
+    border: none;
+    padding: 5px 10px;
+    border-radius: 7px;
+    font-weight: 500;
+    background-color: #b1a8a8;
+}
+.blg-btn{
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 7px;
+    font-weight: 500;
+    background-color: #f50000c5;
+}
+.menu-btn{
+    display: flex;
+    justify-content: center;
+}
+.menu{
+    margin: 5px 20px;
+    border-radius: 7px;
+    border: none;
+    padding: 10px 20px;
+    background-color: rgb(185, 176, 176);
+    color: white;
+    font-weight: 500;
+}
+
+.box{
+    width: 300px;
+    height: 450px;
+    border: none;
+    border: 8px;
+    padding: 5px;
+    text-align: center;
+    margin: 5px;
+}
+#videos{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+
+}
+
+.box-img{
+    width: 312px;
+    height: 200px;
+    flex-shrink: 0;
+    border-radius: 7px;   
+}
+.pp-img{
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+    border-radius: 30px;
+}
+.inner{
+    display: flex;
+    margin-top: 10px;
+    justify-content:flex-start;
+}
+
+.verified-logo{
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+}
+
+.thumb{
+    position: relative;
+    display: inline-block;
+}
+
+.img-txt{
+    position: absolute;
+    font-size: x-small;
+    left: 140px;
+    top: 160px;
+    text-align: center;
+    border-radius: 7px;
+    padding: 2px 4px;
+    background-color: rgb(110, 110, 110);
+} 
