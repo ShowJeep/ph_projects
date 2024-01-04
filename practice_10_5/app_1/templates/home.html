@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>This is home page</h1>
+    <h1>{{ lst | join:" - " }}</h1>
+    <h1>{{ time | date:"D d M Y" }}</h1>
+    <h1>{{ val | add:"5" }}</h1>
+    <h1>{{lst.1 | capfirst}}</h1>
+    <h1>{{ data.0.name | cut:" " }}</h1>
+    <h1>{{nm | dictsort:"name"}}</h1>
+    <h1>{{ num | first }}</h1>
+    <h1>{{ num | last }}</h1>
+    <h1>{{ num | length }}</h1>
+    <h1>{{str | lower}}</h1>
+    <h1>{{str | upper}}</h1>
+    <h1>{{str | title}}</h1>
+    <h1>{{ num | random }}</h1>
+    <h1>{{ num | slice:":2" }}</h1>
+    <h1>{{ time | time:"H:i" }}</h1>
+    <h1>{{str |  truncatechars:11}}</h1>
+    <h1>{{str | wordcount }}</h1>
+    <h1>{{str |  truncatewords:2 }}</h1>
+</body>
+</html>
