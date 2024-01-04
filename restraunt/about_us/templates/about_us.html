@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+
+<div style="display: flex; justify-content: center; align-items: center; position: relative;">
+    <div style="width: 1500px; margin: 30px 0px; position: relative; overflow: hidden;">
+
+      <img src="{% static 'restraunt.jpeg' %}" alt="" style="width:100%; margin-bottom: 20px; filter: brightness(70%);">
+
+      <div style="position: absolute; top: 20%; left: 50%; transform: translate(-50%, -50%); z-index: 1; color: red; text-align: center; width: 100%;">
+        <h1>Khai Khai Restaurant</h1>
+      </div>
+
+      <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 1; color: white; text-align: center; width: 100%;">
+        <h5>
+            Khai Khai is a restaurant that offers heritage Indian comfort food, prepared with fire and smoke, that transports you to another place and time 12. The restaurant is located at 29 Queen Street. The menu is at the root of India’s extraordinary culinary evolution with its melting pot of distinctive regional food traditions and cultural heritage 1. Each dish is followed back to its original recipe with nothing spared in the pursuit of authenticity 1. The restaurant has a rating of 4.0 out of 5.0 based on 288 reviews 1. The restaurant is open from Monday to Sunday, with varying hours of operation 1. Khai Khai has been praised for its smoke-enhanced Indian small plates menu, which includes lamb bhuna, biryani, vindaloo, rotis, kheema naan, and more 3. The restaurant also offers a breakfast menu, which features masala mash with pooris and akuri toast 3. Khai Khai has been visited by famous personalities such as Gordon Ramsay and Harrison Ford 3. The restaurant has a rustic charm and nostalgic elegance that adds to the dining experience
+        </h5>
+      </div>
+
+    </div>
+</div>
+
+{% endblock %}

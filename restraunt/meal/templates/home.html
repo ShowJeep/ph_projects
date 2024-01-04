@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+
+<div class="" style="height:92vh; display: flex; align-items: center; justify-content: center; background-color: red;">
+    <div class="col-6">
+        <h1 style="color: white;">Khai Khai Restaurant</h1>
+        <p style="color: white;">
+            Welcome to Khai Khai Restaurant, where culinary excellence meets warm hospitality. Indulge your senses in a symphony of flavors crafted with passion and dedication. Our diverse menu, inspired by global cuisines, invites you to savor a unique dining experience. Join us for delightful moments, creating lasting memories at Khai Khai.
+        </p>
+    </div>
+    <div>
+        <img src="{% static 'burgir.jpg' %}" alt="" style="height:70vh; border-radius: 5%;">
+    </div>
+</div>
+
+{% endblock %}
