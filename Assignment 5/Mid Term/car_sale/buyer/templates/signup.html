@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+{% comment %} <form style="width: 50%; margin: auto" method="post">
+    <h1>{{type}} Page</h1>
+    {% csrf_token %}
+{{form | crispy}}
+<button class="btn btn-warning mb-5">Submit</button>
+</form> {% endcomment %}
+<form style="width:50% ; margin : auto" method="post">
+    <h1>{{type}} page</h1>
+    {% csrf_token %}
+{{form | crispy}}
+
+<button class="btn btn-warning mb-5">Submit</button>
+</form>
+{% endblock %}

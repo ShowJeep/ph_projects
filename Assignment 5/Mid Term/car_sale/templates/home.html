@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+
+
+<div class="d-flex flex-wrap px-5 pt-3 align-items-center">
+    <div class="col-6">
+        <h1>Welcome to GARI</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime rerum consectetur iste similique quo quos qui. Quam reprehenderit magni nesciunt itaque consectetur temporibus nulla error quos quas! Corporis dolore nisi ratione vel, incidunt quae hic? Recusandae odit doloribus error, autem natus ea id velit reprehenderit illo iusto est et quam, nulla odio. Doloremque vel illum, incidunt quae numquam similique? Aliquam fuga commodi autem laborum explicabo aut ab eaque! Perferendis distinctio veritatis sunt adipisci expedita tempore repudiandae impedit fuga quas inventore totam natus, fugiat veniam placeat libero officia aperiam eveniet ad dolorum at. Incidunt distinctio dolores a ad magnam consequatur quisquam!</p>
+    </div>
+    <div class="col-6">
+        <img src="{% static 'header.jpeg' %}" alt="" style="width:500px">
+    </div>
+</div>
+
+
+<div class="mx-16 px-16 mt-16 pt-16 pb-5 mb-5 flex flex-wrap gap-5 justify-center">
+    <a href="{% url "home" %}"><button type="button" class="btn btn-danger">All</button></a>
+    {% for brand in brands %}
+    <a href="{% url "home" brand_name=brand.name %}"><button type="button" class="btn btn-danger">{{brand.name}}</button></a>
+    {% endfor %}
+</div>
+
+
+    <div class="col-10 pt-3">
+        <h4>{{cars|length}} Results Found!</h4>
+        <div class="d-flex flex-wrap pt-1">
+            {% for car in cars %}
+            <div class="col-sm-3 pt-5 ">
+                <div class="card mx-2">
+                    <div class="card-body">
+                        <img src="{{car.image.url}}" class="card-img-top" alt="...">
+                        <h5 class="card-title">{{car.brand}} {{car.model}}</h5>
+                        <p>Price: ${{car.price}}</p>
+                        <p class="card-text">Brand: {{car.brand}}</p>
+                        <p class="card-text">Perferendis distinctio veritatis sunt adipisci expedita tempore repudiandae impedit fuga quas inventore totam natus, fugiat veniam placeat libero officia aperiam eveniet</p>
+                        <a href="{% url "car_detail" pk=car.pk %}" class="text-decoration-none text-dark"><button type="button" class="btn btn-primary">Car Details</button></a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}
