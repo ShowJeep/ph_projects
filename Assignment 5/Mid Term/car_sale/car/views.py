@@ -23,19 +23,9 @@ class CarDetail(DetailView):
         context= super().get_context_data(**kwargs)
         car= self.object
         comments= car.comments.all()
-
-        if self.request.method == 'POST':
-            comment_form= forms.CommentForm(data=self.request.POST)
-            if comment_form.is_valid():
-                new_comment= comment_form.save(commit=False)
-                new_comment.car= car
-                new_comment.save()
-        else:
-            comment_form = forms.CommentForm()
-        
+        comment_form = forms.CommentForm()
         context["comments"] = comments
         context["comment_form"] = comment_form
-
         return context
     
 def update_quantity(request, pk):
